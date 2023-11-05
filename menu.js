@@ -297,3 +297,8 @@ cartbtn.addEventListener("click",function(){
     document.querySelector(".cart").style.right="-100%"
 })
 /*---------------------------------------cart---------------------------------------*/
+
+function order(){
+  document.getElementById("login-message").innerHTML = "*Bạn phải đăng nhập để đặt hàng!";
+  window.location.href = "#home";
+}

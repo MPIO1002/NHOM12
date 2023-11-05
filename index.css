@@ -304,3 +304,27 @@ h2 {
 }
 
 /*----------------------------------------footer----------------------------------------*/
+
+/*----------------------------------------đăng xuất----------------------------------------*/
+.signout {
+  position: fixed;
+  background-color: #FFA500;
+  width: 210px;
+  color: #ededed;
+  text-decoration: none;
+  padding: 5px 5px;
+  display: none;
+  margin-left: -170px;
+  margin-top: 19px;
+}
+
+.signout>ul {
+  display: block;
+  flex-direction: column;
+  justify-content: left;
+  list-style: none;
+}
+
+li.dropdown:hover .signout {
+  display: block;
+}

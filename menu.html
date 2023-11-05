@@ -17,6 +17,7 @@
             <li><a>Thực đơn</a></li>
             <li><a>Về chúng tôi</a></li>
             <li><a>Khuyến mãi</a></li>
+            <li><a href="/signin.html" style="color: white;">Đăng nhập</a></li>
         </ul>
         <ul class="userfunction">
             <li class="cart-icon"><a><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -110,7 +111,8 @@
             <div style="text-align: right;" class="price-total">
                 <p style="padding-top: 20px;">Tổng tiền: <span>0</span>đ</p>
             </div>
-            <button>Chốt Đơn</button>
+            <button onclick="order()">Chốt Đơn</button>
+            <div class="error" id="login-message"></div>
         </form>
     </section>
 

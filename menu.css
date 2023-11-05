@@ -312,6 +312,7 @@ h1 {
 
 .cart button {
   margin-top: 12px;
+  margin-bottom: 12px;
   height: 30px;
   padding: 0 20px;
   cursor: pointer;
@@ -330,6 +331,12 @@ h1 {
 .cart i {
   cursor: pointer;
   margin-bottom: 30px;
+}
+
+.error {
+  color: red; 
+  font-size: medium;
+  font-family: Arial, sans-serif;
 }
 
 /*----------------------------------------Cart----------------------------------------*/
@@ -420,3 +427,27 @@ h1 {
 }
 
 /*----------------------------------------footer----------------------------------------*/
+
+/*----------------------------------------đăng xuất----------------------------------------*/
+.signout {
+  position: fixed;
+  background-color: #FFA500;
+  width: 210px;
+  color: #ededed;
+  text-decoration: none;
+  padding: 5px 5px;
+  display: none;
+  margin-left: -170px;
+  margin-top: 19px;
+}
+
+.signout>ul {
+  display: block;
+  flex-direction: column;
+  justify-content: left;
+  list-style: none;
+}
+
+li.dropdown:hover .signout {
+  display: block;
+}

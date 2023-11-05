@@ -145,39 +145,6 @@ for (let i of products.data) {
   });
 
 
-  // Lấy mảng customers từ Local Storage
-var customers = JSON.parse(localStorage.getItem("customers"));
-
-// Kiểm tra xem mảng customers có tồn tại
-if (customers) {
-  // Ở đây, bạn có thể lặp qua mảng customers để tìm người dùng đã đăng nhập
-  // Ví dụ: Lặp qua mảng để tìm người dùng đã đăng nhập
-  for (var i = 0; i < customers.length; i++) {
-    if (customers[i].Email === Email && customers[i].Password === Password) {
-      // Đánh dấu người dùng đã đăng nhập thành công
-      customers[i].isLoggedIn = true;
-
-      // Lưu mảng customers đã cập nhật vào Local Storage
-      localStorage.setItem("customers", JSON.stringify(customers));
-
-      break; // Dừng vòng lặp nếu tìm thấy người dùng đã đăng nhập
-    }
-  }
-  for (var i = 0; i < customers.length; i++) {
-    if (customers[i].isLoggedIn === true) {
-      // Lấy tên của người dùng đã đăng nhập
-      var userName = customers[i].Name; // Thay đổi loggedInUserName thành userName
-
-      // Lấy thẻ <span> để hiển thị tên người dùng
-      var userNameSpan = document.getElementById("username");
-
-      // Đặt tên người dùng vào thẻ <span>
-      userNameSpan.textContent = userName;
-      break; // Dừng vòng lặp nếu tìm thấy người dùng đã đăng nhập
-    }
-  }
-}
-
 
 
   

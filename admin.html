@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3dff50b2d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+    <title>Admin</title>
+</head>
+<body>
+    <header class="header">
+        <a class="logo"><i class="fa-brands fa-mailchimp"></i> PYP.</a>
+        <ul class="userfunction">
+            <li><a><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </header>
+    <div class="sidebar">
+        <a><i class="fa-solid fa-file-invoice"></i> Quản lí đơn hàng</a>
+        <a><i class="fa-solid fa-user"></i> Quản lí người dùng</a>
+        <a><i class="fa-solid fa-box"></i> Quản lí sản phẩm</a>
+        <a><i class="fa-solid fa-chart-simple"></i> Thống kê</a>
+
+
+    </div>
+
+    <!-- Thêm phần nội dung cho quản lý đơn hàng của khách -->
+    <div id="manageOrdersContent" class="content" style="display: none;">
+        <label for="startDate">Từ ngày:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">Đến ngày:</label>
+        <input type="date" id="endDate">
+        <button onclick="filterOrdersByDate()">Lọc</button>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã đơn hàng</th>
+                    <th>Ngày</th>
+                    <th>Tình trạng</th>
+                    <th>Tổng tiền</th>
+                    <th>Tên Khách Hàng</th>
+                    <th>Tên Sản Phẩm</th>
+                </tr>
+            </thead>
+            <tbody id="manageOrdersTableBody">
+                <!-- Dữ liệu đơn hàng sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal hiển thị chi tiết đơn hàng -->
+    <div id="orderDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderDetailsModal()">&times;</span>
+            <h2>Thông tin chi tiết đơn hàng</h2>
+            <p id="orderDetails"></p>
+            <button onclick="closeOrderDetailsModal()">Đóng</button>
+        </div>
+    </div>
+
+    
+    <div id="statistical" class="content1" style="display: none;">
+    <table>
+        <thead>
+            <tr>
+                <th>Tên Sản Phẩm</th>
+                <th>Tháng 10</th>
+                <th>Tháng 11</th>
+                <th>Tháng 12</th>           
+                <th>Tổng Số Lượng</th>
+            </tr>
+        </thead>
+        <tbody id="statisticalbody">
+          
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Combo khuyến mãi MayoB</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">0</td>
+                <td class="total">2</td>
+            </tr>
+            <tr>
+                <td>Combo MayoB 2</td>
+                <td class="total">0</td>
+                <td class="total">0</td>
+                <td class="total">0</td>
+                <td class="total">0</td>
+            </tr>
+            <tr>
+                <td>Combo MayoB 3</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">0</td>
+                <td class="total">2</td>
+            </tr>
+            <tr>
+                <td>Combo MayoB 4</td>
+                <td class="total">0</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">2</td>
+            </tr>
+            <tr>
+                <td>Hamburger cá</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Hamburger tôm</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Hamburger gà</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Combo hamburger</td>
+                <td class="total">2</td>
+                <td class="total">1</td>
+                <td class="total">2</td>
+                <td class="total">5</td>
+            </tr>
+            <tr>
+                <td>Mì ý S2</td>
+                <td class="total">2</td>
+                <td class="total">2</td>
+                <td class="total">2</td>
+                <td class="total">6</td>
+            </tr>
+            <tr>
+                <td>Mì ý S4</td>
+                <td class="total">1</td>
+                <td class="total">2</td>
+                <td class="total">2</td>
+                <td class="total">5</td>
+            </tr>
+            <tr>
+                <td>Combo cơm gà</td>
+                <td class="total">2</td>
+                <td class="total">2</td>
+                <td class="total">1</td>
+                <td class="total">5</td>
+            </tr>
+            <tr>
+                <td>Khoai tây nghiền</td>
+                <td class="total">2</td>
+                <td class="total">2</td>
+                <td class="total">1</td>
+                <td class="total">5</td>
+            </tr>
+            <tr>
+                <td>Bánh Tart phô mai</td>
+                <td class="total">2</td>
+                <td class="total">3</td>
+                <td class="total">3</td>
+                <td class="total">7</td>
+            </tr>
+            <tr>
+                <td>Snack mực</td>
+                <td class="total">0</td>
+                <td class="total">2</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Bắp cải trộn</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Sprite</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Coca Cola</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Fanta</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">1</td>
+                <td class="total">3</td>
+            </tr>
+            <tr>
+                <td>Dasani</td>
+                <td class="total">0</td>
+                <td class="total">0</td>
+                <td class="total">0</td>
+                <td class="total">0</td>
+            </tr>
+            <tr>
+                <td class="sum">Tổng Doanh Thu</td>
+                <td>7800000<span>đ</span></td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+   
+    <script>
+        var manageOrdersLink = document.querySelector('.sidebar a:nth-child(4)');
+        var isOrdersTableVisible = false;
+        manageOrdersLink.addEventListener('click', function() {
+            var ordersTable = document.querySelector('#statistical'); 
+            isOrdersTableVisible = !isOrdersTableVisible; 
+            if (isOrdersTableVisible) {
+                ordersTable.style.display = 'block';
+            } else {
+                ordersTable.style.display = 'none';
+            }
+        });
+
+    </script>
+    
+    
+</body>
+</html>

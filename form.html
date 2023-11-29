@@ -4,6 +4,7 @@
     <title>Form Đặt Hàng</title>
     <style>
     * {
+    color: #FF8C00;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,21 +17,23 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    height: 610px;
+    width: 500px;
     margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;    
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 25px;   
 }
 
 .container h1 {
     text-align: center;
-    color: #333;
+    color: #FF8C00;
 }
 
 #orderForm {
     display: flex;
+    margin-left: 40px;
     flex-direction: column;
 }
 
@@ -41,25 +44,17 @@ label {
 
 input, select, textarea {
     margin-top: 8px;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
+    width: 85%;
+    box-sizing: content-box;
+    font-size: 13px;
 }
 
 select {
     cursor: pointer;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
 }
 
 .hidden {
@@ -74,16 +69,30 @@ input[type="submit"]:hover {
     text-align: center;
     border-radius: 4px;
 }
-
-.back-button {
+.order {
     display: block;
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-left: 40px;
     text-align: center;
     text-decoration: none;
-    background-color: #333;
+    background-color: #FF8C00;
     color: #fff;
     padding: 10px;
     border-radius: 4px;
+    width: 83%;
+
+}
+.back-button {
+    display: block;
+    margin-top: 15px;
+    margin-left: 40px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FF8C00;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    width: 83%;
 }
 
 .back-button:hover {
@@ -124,16 +133,26 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-
-
-
+.image-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("image/background");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 720px;
+    animation: slide 5s linear infinite;
+}
    
     </style>
 </head>
 
 <body>
+    <div class="image-background">
     <div class="container">
-        <h1>Form Đặt Hàng</h1>
+        <h1 style="margin-top: 15px;">Form Đặt Hàng</h1>
         <form id="orderForm"  method="post">
             <label for="name">Tên của bạn:</label>
             <input type="text" id="name" name="name" required>
@@ -152,15 +171,15 @@ input[type="submit"]:hover {
                 <option value="cash">Tiền Mặt</option>
             </select>
 
-            <input type="submit" value="Đặt Hàng" onclick="openModal()">
 
 
         </form>
-
+        <a class="order" href="history.html">Đặt hàng</a>
         <div id="successMessage" class="hidden">Giao dịch hoàn thành!</div>
 
         <a href="index.html" class="back-button">Quay Về Trang Chủ</a>
-    </div>  
+    </div> 
+    </div>
 
     
     

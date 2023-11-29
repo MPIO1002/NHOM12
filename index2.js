@@ -144,7 +144,6 @@ for (let i of products.data) {
     });
   });
 
-
-
+ 
 
   

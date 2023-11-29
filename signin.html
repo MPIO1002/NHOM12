@@ -46,14 +46,6 @@
 
     <script src="scroll.js"></script>
     <script>
-        // window.onload = function() {
-        //     var registrationData = {
-        //         Name: "",
-        //         Email: "",
-        //         Password: ""
-        //     };
-        //     localStorage.setItem("registrationData", JSON.stringify(registrationData));
-        // }
         var customers = JSON.parse(localStorage.getItem("customers")) || [];
 
         function isValidEmail(email) {
@@ -91,6 +83,9 @@
             for (var i = 0; i < customers.length; i++) {
                 if (Email === customers[i].Email) {
                     if (Password === customers[i].Password) {
+                        var Name = localStorage.getItem(customers.Name);
+                        document.getElementById('username').innerHTML = Name;
+
                         found = true;
                         alert("Đăng nhập thành công!")
                             window.location.href = "index2.html";

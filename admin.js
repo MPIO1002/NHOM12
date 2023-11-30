@@ -122,7 +122,7 @@ let products = {
     ],
 };
 /*----------------------------------------Quản lý đơn hàng----------------------------------------*/
-var manageOrdersLink = document.querySelector('.sidebar a:nth-child(1)');
+var manageOrdersLink = document.querySelector('.sidebar a:nth-child(2)');
 var isOrdersTableVisible = false;
 
 manageOrdersLink.addEventListener('click', function() {

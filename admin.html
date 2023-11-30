@@ -63,7 +63,11 @@
     </div>
 
     
-    <div id="statistical" class="content1" style="display: none;">
+    <div id="statistical" class="content1" style="display: none;">   
+        <input type="text" id="productNameSearch" oninput="searchProduct()">
+        <button id="searchButton" onclick="searchProduct()">Search</button>
+
+
     <table>
         <thead>
             <tr>
@@ -217,22 +221,51 @@
             </tr>
         </tfoot>
     </table>
-    </div>
-   
-    <script>
-        var manageOrdersLink = document.querySelector('.sidebar a:nth-child(4)');
-        var isOrdersTableVisible = false;
-        manageOrdersLink.addEventListener('click', function() {
-            var ordersTable = document.querySelector('#statistical'); 
-            isOrdersTableVisible = !isOrdersTableVisible; 
-            if (isOrdersTableVisible) {
-                ordersTable.style.display = 'block';
-            } else {
-                ordersTable.style.display = 'none';
-            }
-        });
+        </div>
+    
 
-    </script>
+
+    
+
+<script>
+    
+    var manageOrdersLink = document.querySelector('.sidebar a:nth-child(5)');
+    var isOrdersTableVisible = false;
+    manageOrdersLink.addEventListener('click', function() {
+        var ordersTable = document.querySelector('#statistical');
+        isOrdersTableVisible = !isOrdersTableVisible;
+        if (isOrdersTableVisible) {
+            ordersTable.style.display = 'block';
+        } else {
+            ordersTable.style.display = 'none';
+        }
+    });
+
+    function searchProduct() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("productNameSearch");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("statistical");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 1; i < tr.length; i++) { // Start from index 1 to skip the header row
+        td = tr[i].getElementsByTagName("td")[0]; // Assuming the product name is in the first column
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+
+    
+</script>
+
+
+
     
     
 </body>

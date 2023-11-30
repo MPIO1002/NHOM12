@@ -10,19 +10,21 @@
 </head>
 <body>
     <header class="header">
-        <a class="logo"><i class="fa-brands fa-mailchimp"></i> PYP.</a>
+        <a class="function" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></a>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-info">
+                <a href="index2.html"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a><i class="fa-solid fa-file-invoice"></i> Quản lí đơn hàng</a>
+                <a><i class="fa-solid fa-user"></i> Quản lí người dùng</a>
+                <a><i class="fa-solid fa-box"></i> Quản lí sản phẩm</a>
+                <a><i class="fa-solid fa-chart-simple"></i> Thống kê</a>
+            </div>   
+        </div>
+        <a class="logo"><i class="fa-brands fa-mailchimp"></i> PYP.Admin</a>
         <ul class="userfunction">
             <li><a><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </header>
-    <div class="sidebar">
-        <a><i class="fa-solid fa-file-invoice"></i> Quản lí đơn hàng</a>
-        <a><i class="fa-solid fa-user"></i> Quản lí người dùng</a>
-        <a><i class="fa-solid fa-box"></i> Quản lí sản phẩm</a>
-        <a><i class="fa-solid fa-chart-simple"></i> Thống kê</a>
-
-
-    </div>
 
     <!-- Thêm phần nội dung cho quản lý đơn hàng của khách -->
     <div id="manageOrdersContent" class="content" style="display: none;">

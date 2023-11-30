@@ -1,3 +1,8 @@
+let sideBar = document.getElementById("sidebar");
+function toggleSidebar(){
+  sideBar.classList.toggle("open");
+}
+//--------------------------------------------------------//
 let products = {
     data: [
       {

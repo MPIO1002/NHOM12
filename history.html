@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYP</title>
+    <script src="https://kit.fontawesome.com/3dff50b2d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index2.js" defer></script>
+    <style>
+                .history {
+            background-color: #fff;
+            /* height: 642px; */
+            padding: 50px 50px;
+        }
+        
+        .a1 {
+            background-color: #FF8C00;
+            height: auto;
+            margin: auto;
+            padding: 40px 0;
+        }
+        
+        .a1-name {
+            text-align: center;
+            padding-bottom: 15px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        
+        .history .a1-content {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* padding: 20px; */
+            margin-top: 10px;
+            border-radius: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .history .text-info {
+            margin: 5px;
+            padding: 10px 20px;
+            color: #fff;
+            width: 25%;
+        }
+        
+        .text-info span {
+            /* padding-left: 4px; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .history .row-col1-text {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo" href="index2.html"><i class="fa-brands fa-mailchimp"></i> PYP.</a>
+        <ul class="content">
+            <li><a href="menu2.html" class="menu">Thực đơn</a></li>
+            <li><a>Về chúng tôi</a></li>
+            <li><a>Khuyến mãi</a></li>
+        </ul>
+        <ul class="userfunction">
+            <li class="dropdown"><a><i class="fa-solid fa-user"></i></a>
+                <div class="signout">
+                    <ul>
+                        <li>Xin chào, <span id="username"></span></li>
+                        <li><a href="index.html" style="color: white;">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <!-- lịch sử đơn hàng -->
+    <!-- start -->
+    <section class="history">
+        <div class="a1">
+            <div class="a1-name">ĐƠN HÀNG ĐÃ ĐẶT</div>
+            <div class="a1-content" id="orderHistoryContainer">
+                <div style="text-align: left;" class="text-info">
+                    <div class="row-col1-text">
+                        <p>Combo khuyến mãi MayoB</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x1</span>
+                    </div>
+                    <div class="row-col1-text">
+                        <p>Dasani</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x1</span>
+                    </div>
+                    <div class="row-col1-text">
+                        <p>Snack mực</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x2</span>
+                    </div>
+                </div>
+                <div class="text-info">30/11/2023</div>
+                <div class="text-info">204.000 vnd</div>
+                <div class="text-info">Đang giao</div>
+            </div>
+            <div class="a1-content" id="orderHistoryContainer">
+                <div style="text-align: left;" class="text-info">
+                    <div class="row-col1-text">
+                        <p>Bánh Tart phô mai</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x2</span>
+                    </div>
+                    <div class="row-col1-text">
+                        <p>Coca Cola</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x1</span>
+                    </div>
+                </div>
+                <div class="text-info">23/11/2023</div>
+                <div class="text-info">134.000 vnd</div>
+                <div class="text-info">Đã giao</div>
+            </div>
+            <div class="a1-content" id="orderHistoryContainer">
+                <div style="text-align: left;" class="text-info">
+                    <div class="row-col1-text">
+                        <p>Combo khuyến mãi MayoB</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x1</span>
+                    </div>
+                    <div class="row-col1-text">
+                        <p>Dasani</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x1</span>
+                    </div>
+                    <div class="row-col1-text">
+                        <p>Snack mực</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x2</span>
+                    </div>
+                </div>
+                <div class="text-info">30/11/2023</div>
+                <div class="text-info">204.000 vnd</div>
+                <div class="text-info">Đang giao</div>
+            </div>
+            <div class="a1-content" id="orderHistoryContainer">
+                <div style="text-align: left;" class="text-info">
+                    <div class="row-col1-text">
+                        <p>Bánh Tart phô mai</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x2</span>
+                    </div>
+                    <div class="row-col1-text">
+                        <p>Coca Cola</p>
+                        <span style="display: block; font-size: 14px; font-style: normal;">x1</span>
+                    </div>
+                </div>
+                <div class="text-info">23/11/2023</div>
+                <div class="text-info">134.000 vnd</div>
+                <div class="text-info">Đã giao</div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="gridrow">
+                <div class="column24">
+                    <a href="#" class="footerlogo"><i class="fa-brands fa-mailchimp"></i> PYP.</a>
+                </div>
+                <div class="column24">
+                    <a href="" class="footerheading"><i class="fa-solid fa-phone"></i> Hotline đặt hàng</a>
+                    <ul class="hotline">
+                        <li>
+                            <a href=""></a>19006008</li>
+                    </ul>
+                </div>
+                <div class="column24">
+                    <a href="" class="footerheading"><i class="fa-solid fa-location-dot"></i> Hệ thống cửa hàng</a>
+                    <ul class="minicontent">
+                        <li>
+                            <a href=""></a>Thành phố Hồ Chí Minh</li>
+                        <li>
+                            <a href=""></a>Thủ đô Hà Nội</li>
+                        <li>
+                            <a href=""></a>Thành phố Đà Nẵng</li>
+                    </ul>
+                </div>
+                <div class="column24">
+                    <a href="" class="footerheading"><i class="fa-solid fa-users"></i> Về chúng tôi</a>
+                    <ul class="minicontent">
+                        <li>
+                            <a href=""></a>Tuyển dụng</li>
+                        <li>
+                            <a href=""></a>Đội ngũ nhân viên</li>
+                    </ul>
+                </div>
+                <div class="column24">
+                    <a href="" class="footerheading"><i class="fa-solid fa-hand-holding-hand"></i> Chăm sóc khách
+                        hàng</a>
+                    <ul class="minicontent">
+                        <li>
+                            <a href=""></a>Hướng dẫn đặt món</li>
+                        <li>
+                            <a href=""></a>Giải quyết vấn đề</li>
+                        <li>
+                            <a href=""></a>Gmail</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

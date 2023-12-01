@@ -137,9 +137,20 @@ manageOrdersLink.addEventListener('click', function() {
   }
 });
 
+var manageProduct = document.querySelector('.sidebar a:nth-child(4)');
+var isOrdersTableVisible = false;
 
+manageProduct.addEventListener('click', function() {
+    var list = document.querySelector('.managerProduct');
+    isOrdersTableVisible = !isOrdersTableVisible; // Đảo ngược trạng thái
 
-
+    if (isOrdersTableVisible) {
+        list.style.display = 'block';
+        loadAndDisplayOrdersData();
+    } else {
+        list.style.display = 'none';
+    }
+});
 
 function showOrderDetails(orderID, orderDate, orderStatus, orderTotal) {
 // Hiển thị thông tin chi tiết đơn hàng trong modal
@@ -348,6 +359,47 @@ var filterButton = document.querySelector('#manageOrdersContent button');
 filterButton.addEventListener('click', function() {
 filterOrdersByDate();
 });
+
+/*-----------------------------Quản lý sản phẩm--------------------------------------- */
+
+
+var manageProduct = document.querySelector('.sidebar a:nth-child(4)');
+demo.addEventListener('click', function() {
+    document.querySelector('.managerProduct').style.display = 'block';
+});
+
+
+const modal = document.getElementById('myModal1')
+
+const btn = document.getElementById('mybtn')
+
+const span = document.getElementsByClassName('close')[0];
+
+btn.onclick = () => {
+  modal.style.display = "block";
+};
+
+span.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+function changeimgadd(input){
+  var reader = new FileReader();
+  reader.onload = function (e) {
+      document.getElementById('imgadd').src = e.target.result;
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+
+
+
+  
 
 
 

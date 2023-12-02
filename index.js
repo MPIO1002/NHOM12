@@ -1,3 +1,7 @@
+let Login = document.getElementById("login1");
+function toggleLogin(){
+  Login.classList.toggle("open1");
+}
 /*---------------------------------------slider---------------------------------------*/
 const carousel = document.querySelector(".carousel"),
 firstImg = carousel.querySelectorAll("img")[0],

@@ -227,8 +227,16 @@ dateCell.textContent = order.date;
 row.appendChild(dateCell);
 
 var statusCell = document.createElement('td');
-statusCell.textContent = order.status;
-row.appendChild(statusCell);
+  var statusDropdown = document.createElement('select');
+  statusDropdown.innerHTML = `
+    <option value="Đã Xử Lý" ${order.status === 'Đã Xử Lý' ? 'selected' : ''}>Đã Xử Lý</option>
+    <option value="Chưa Xử Lý" ${order.status === 'Chưa Xử Lý' ? 'selected' : ''}>Chưa Xử Lý</option>
+  `;
+  statusDropdown.onchange = function () {
+    order.status = statusDropdown.value;
+  };
+  statusCell.appendChild(statusDropdown);
+  row.appendChild(statusCell);
 
 var totalCell = document.createElement('td');
 // Đổi số tiền thành đơn vị đồng và định dạng nó

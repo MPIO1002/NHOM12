@@ -17,11 +17,16 @@
             <li><a href="menu.html" class="menu">Thực đơn</a></li>
             <li><a>Về chúng tôi</a></li>
             <li><a>Khuyến mãi</a></li>
-            <li><a href="signin.html" style="color: white;">Đăng nhập</a></li>
         </ul>
         <ul class="userfunction">
             <li><a><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a><i class="fa-solid fa-user"></i></a></li>
+            <li><a onclick="toggleLogin()"><i class="fa-solid fa-user"></i></a></li>
+            <div class="login1" id="login1">
+                <div class="login-info">
+                    <a href="signin.html" style="color: white;">Đăng nhập</a>
+                    <a href="signup.html" style="color: white;">Đăng kí</a>
+                </div>
+            </div>
         </ul>
     </header>
     <img style="width: 100%; height: auto;" src="image/banner_header.png">

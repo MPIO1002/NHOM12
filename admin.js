@@ -369,33 +369,33 @@ demo.addEventListener('click', function() {
 });
 
 
-const modal = document.getElementById('myModal1')
+// const modal = document.getElementById('myModal1')
 
-const btn = document.getElementById('mybtn')
+// const btn = document.getElementById('mybtn')
 
-const span = document.getElementsByClassName('close')[0];
+// const span = document.getElementsByClassName('close')[0];
 
-btn.onclick = () => {
-  modal.style.display = "block";
-};
+// btn.onclick = () => {
+//   modal.style.display = "block";
+// };
 
-span.onclick = () => {
-  modal.style.display = "none";
-};
+// span.onclick = () => {
+//   modal.style.display = "none";
+// };
 
-window.onclick = (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
+// window.onclick = (event) => {
+//   if (event.target === modal) {
+//     modal.style.display = "none";
+//   }
+// };
 
-function changeimgadd(input){
-  var reader = new FileReader();
-  reader.onload = function (e) {
-      document.getElementById('imgadd').src = e.target.result;
-  };
-  reader.readAsDataURL(input.files[0]);
-}
+// function changeimgadd(input){
+//   var reader = new FileReader();
+//   reader.onload = function (e) {
+//       document.getElementById('imgadd').src = e.target.result;
+//   };
+//   reader.readAsDataURL(input.files[0]);
+// }
 
 
 

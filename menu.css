@@ -428,26 +428,25 @@ h1 {
 
 /*----------------------------------------footer----------------------------------------*/
 
-/*----------------------------------------đăng xuất----------------------------------------*/
-.signout {
-  position: fixed;
-  background-color: #FFA500;
-  width: 210px;
-  color: #ededed;
-  text-decoration: none;
-  padding: 5px 5px;
-  display: none;
-  margin-left: -170px;
-  margin-top: 19px;
+.login1{
+  position: absolute;
+  top: 10%;
+  right: 5px; 
+  max-height: 0px;
+  overflow: hidden;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
-
-.signout>ul {
-  display: block;
+.login-info{
+  display: flex;
   flex-direction: column;
-  justify-content: left;
-  list-style: none;
+  gap: 10px;
+  background-color: #FFA500;
+  color: #ffffff;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 
-li.dropdown:hover .signout {
-  display: block;
+.login1.open1{
+  max-height: 300px;
 }

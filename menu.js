@@ -69,7 +69,7 @@ let products = {
         productName: "Combo cơm gà",
         category: "Spaghetti&Rice",
         price: "157.000",
-        image: "image/Com1.png",
+        image: "image/Com.png",
       },
       {
         productName: "Khoai tây nghiền",

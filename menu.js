@@ -1,3 +1,7 @@
+let Login = document.getElementById("login1");
+function toggleLogin(){
+  Login.classList.toggle("open1");
+}
 /*------------------------------------search&filter-----------------------------------*/
 let products = {
     data: [

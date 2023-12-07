@@ -122,8 +122,8 @@ let products = {
     ],
 };
 /*----------------------------------------Quản lý đơn hàng----------------------------------------*/
-var manageOrdersLink = document.querySelector('.sidebar a:nth-child(2)');
 var isOrdersTableVisible = false;
+var manageOrdersLink = document.querySelector('.sidebar a:nth-child(2)');
 
 manageOrdersLink.addEventListener('click', function() {
   var ordersTable = document.querySelector('#manageOrdersContent');
@@ -138,7 +138,6 @@ manageOrdersLink.addEventListener('click', function() {
 });
 
 var manageProduct = document.querySelector('.sidebar a:nth-child(4)');
-var isOrdersTableVisible = false;
 
 manageProduct.addEventListener('click', function() {
     var list = document.querySelector('.managerProduct');
@@ -151,6 +150,18 @@ manageProduct.addEventListener('click', function() {
         list.style.display = 'none';
     }
 });
+
+var managestatistical = document.querySelector('.sidebar a:nth-child(5)');
+   
+    managestatistical.addEventListener('click', function() {
+        var statisticalTable = document.querySelector('#statistical');
+        isOrdersTableVisible = !isOrdersTableVisible;
+        if (isOrdersTableVisible) {
+          statisticalTable.style.display = 'block';
+        } else {
+          statisticalTable.style.display = 'none';
+        }
+    });
 
 function showOrderDetails(orderID, orderDate, orderStatus, orderTotal) {
 // Hiển thị thông tin chi tiết đơn hàng trong modal

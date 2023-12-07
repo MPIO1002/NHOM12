@@ -504,17 +504,7 @@
 
 <script>
     
-    var manageOrdersLink = document.querySelector('.sidebar a:nth-child(5)');
-    var isOrdersTableVisible = false;
-    manageOrdersLink.addEventListener('click', function() {
-        var ordersTable = document.querySelector('#statistical');
-        isOrdersTableVisible = !isOrdersTableVisible;
-        if (isOrdersTableVisible) {
-            ordersTable.style.display = 'block';
-        } else {
-            ordersTable.style.display = 'none';
-        }
-    });
+    
 
     function searchProduct() {
     var input, filter, table, tr, td, i, txtValue;

@@ -122,46 +122,7 @@ let products = {
     ],
 };
 /*----------------------------------------Quản lý đơn hàng----------------------------------------*/
-var isOrdersTableVisible = false;
-var manageOrdersLink = document.querySelector('.sidebar a:nth-child(2)');
 
-manageOrdersLink.addEventListener('click', function() {
-  var ordersTable = document.querySelector('#manageOrdersContent');
-  isOrdersTableVisible = !isOrdersTableVisible; // Đảo ngược trạng thái
-
-  if (isOrdersTableVisible) {
-      ordersTable.style.display = 'block';
-      loadAndDisplayOrdersData();
-  } else {
-      ordersTable.style.display = 'none';
-  }
-});
-
-var manageProduct = document.querySelector('.sidebar a:nth-child(4)');
-
-manageProduct.addEventListener('click', function() {
-    var list = document.querySelector('.managerProduct');
-    isOrdersTableVisible = !isOrdersTableVisible; // Đảo ngược trạng thái
-
-    if (isOrdersTableVisible) {
-        list.style.display = 'block';
-        loadAndDisplayOrdersData();
-    } else {
-        list.style.display = 'none';
-    }
-});
-
-var managestatistical = document.querySelector('.sidebar a:nth-child(5)');
-   
-    managestatistical.addEventListener('click', function() {
-        var statisticalTable = document.querySelector('#statistical');
-        isOrdersTableVisible = !isOrdersTableVisible;
-        if (isOrdersTableVisible) {
-          statisticalTable.style.display = 'block';
-        } else {
-          statisticalTable.style.display = 'none';
-        }
-    });
 
 function showOrderDetails(orderID, orderDate, orderStatus, orderTotal) {
 // Hiển thị thông tin chi tiết đơn hàng trong modal
@@ -178,7 +139,7 @@ orderDetailsModal.style.display = 'none';
 }
 
 function loadAndDisplayOrdersData() {
-  if (isOrdersTableVisible) {
+  
 var ordersData = [
   { id: 147, date: '2023-11-01', status: 'Chưa xử lý', total: 110000, customerName: 'Nguyễn Văn N', products: ['Combo khuyến mãi MayoB', 'Hamburger cá'] },
   { id: 148, date: '2023-11-30', status: 'Đã xử lý', total: 140000, customerName: 'Trần Thị O', products: ['Hamburger tôm', 'Mì ý S2'] },
@@ -213,7 +174,7 @@ var ordersData = [
   { id: 177, date: '2023-10-17', status: 'Đã xử lý', total: 200000, customerName: 'Trần Thị S', products: ['Combo cơm gà', 'Mì ý S2'] },
   { id: 178, date: '2023-10-19', status: 'Chưa xử lý', total: 210000, customerName: 'Lê Văn T', products: ['Khoai tây nghiền', 'Combo hamburger'] },
 ];
-  }
+  
 
 var ordersTableBody = document.getElementById('manageOrdersTableBody');
 ordersTableBody.innerHTML = '';
@@ -388,33 +349,7 @@ demo.addEventListener('click', function() {
 });
 
 
-// const modal = document.getElementById('myModal1')
 
-// const btn = document.getElementById('mybtn')
-
-// const span = document.getElementsByClassName('close')[0];
-
-// btn.onclick = () => {
-//   modal.style.display = "block";
-// };
-
-// span.onclick = () => {
-//   modal.style.display = "none";
-// };
-
-// window.onclick = (event) => {
-//   if (event.target === modal) {
-//     modal.style.display = "none";
-//   }
-// };
-
-// function changeimgadd(input){
-//   var reader = new FileReader();
-//   reader.onload = function (e) {
-//       document.getElementById('imgadd').src = e.target.result;
-//   };
-//   reader.readAsDataURL(input.files[0]);
-// }
 
 
 

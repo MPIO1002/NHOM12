@@ -358,6 +358,20 @@ function filterProduct(value) {
   function order() {
     document.getElementById("login-message").innerHTML = "*Bạn phải đăng nhập để đặt hàng!";
   }
+  function isCartEmpty() {
+    var cartItems = document.querySelectorAll("tbody tr");
+    return cartItems.length === 0;
+  }
+  function checkout() {
+    if (isCartEmpty()) {
+      
+      alert("Vui lòng thêm sản phẩm vào giỏ hàng trước khi chốt đơn!");
+      return;
+    }
+  
+    
+  }
+    
 
 
 

@@ -1,5 +1,8 @@
 /*---------------------------------------Đăng nhập----------------------------------------*/
-
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Ubuntu:wght@500&display=swap');
+*{
+    font-family: 'Rowdies', cursive;
+}
 .sign-in {
     position: relative;
     display: flex;
@@ -54,7 +57,6 @@
 }
 
 .login-details input {
-    font-family: Arial, sans-serif;
     display: block;
     padding: 6px 6px 2px;
     border-bottom: 2px #FF8C00 solid;
@@ -122,7 +124,6 @@
 
 .forget-password a {
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
     font-style: oblique;
     font-weight: bold;
     color: #FF8C00;

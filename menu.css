@@ -164,6 +164,22 @@ h1 {
   border-bottom-color: lightseagreen;
 }
 
+.search-price {
+  display: flex;
+  padding: 10px 10px;
+  gap: 10px;
+  color: lightseagreen;
+  justify-content: center;
+}
+
+.item input{
+  border-radius: 15px;
+  padding: 5px 5px;
+  width: 100px;
+  border: 1px;
+  border-color: lightseagreen;
+}
+
 #search-container button {
   padding: 10px 20px;
   margin-left: 10px;
@@ -190,7 +206,7 @@ h1 {
 #products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   padding: 20px 65px;
 }
 
@@ -449,4 +465,33 @@ h1 {
 
 .login1.open1{
   max-height: 300px;
+}
+
+#price-filter{
+  padding: 5px 5px;
+  border-radius: 15px;
+  color: white;
+  background-color: lightseagreen;
+}
+
+.listPage{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 20px;
+  list-style-type: none;
+}
+
+.listPage li {
+  background-color: lightseagreen;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.listPage .active{
+  background-color: #FFF5E1;
+  color: lightseagreen;
+  border: 2px solid;
 }

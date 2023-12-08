@@ -132,7 +132,7 @@
             <div style="text-align: right;" class="price-total">
                 <p style="padding-top: 20px;">Tổng tiền: <span>0</span>đ</p>
             </div>
-            <button><a href="#home" style="color: white;" onclick="order()">Chốt Đơn</div></button>
+            <button onclick="checkout()"><a style="color: white;" onclick="order()">Chốt Đơn</div></button>
             <div class="error" id="login-message"></div>
         </form>
     </section>
@@ -176,6 +176,16 @@
             </div>
         </div>
     </footer>
+    <script>
+            function order() {
+            document.getElementById("login-message").innerHTML = "*Bạn phải đăng nhập để đặt hàng!";
+            window.location.href="#home";
+        }
+    </script>
 </body>
+
+<script>
+
+</script>
 
 </html>

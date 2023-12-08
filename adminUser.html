@@ -178,6 +178,11 @@
     <script>
         var data = []
         function addUser() {
+            if (!checkInputs()) {
+                alert("Hãy nhập đầy đủ thông tin.");
+                return;
+            }
+            
             var id = document.getElementById("id").value
             var name = document.getElementById("name").value
             var mail = document.getElementById("email").value
@@ -201,6 +206,19 @@
             clear()
         }
 
+        function checkInputs() {
+            var id = document.getElementById("id").value;
+            var name = document.getElementById("name").value;
+            var mail = document.getElementById("email").value;
+            var date = document.getElementById("date").value;
+
+            if (id === "" || name === "" || mail === "" || date === "") {
+                return false;
+            }
+
+            return true;
+        }
+        
         function showUser() {
             table = `<thead>
                         <tr>

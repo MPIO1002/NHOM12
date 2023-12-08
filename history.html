@@ -9,54 +9,62 @@
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
     <style>
-                .history {
-            background-color: #fff;
+        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Ubuntu:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            font-family: 'Rowdies', cursive;
+        }
+
+        .history {
+            background-color: #FFF5E1;
             /* height: 642px; */
             padding: 50px 50px;
         }
-        
+
         .a1 {
-            background-color: #FF8C00;
+            background-color: #ffba67;
             height: auto;
             margin: auto;
             padding: 40px 0;
+            border-radius: 30px;
+            box-shadow: 3px 3px 3px rgb(176, 175, 175);
         }
-        
+
         .a1-name {
             text-align: center;
             padding-bottom: 15px;
             font-size: 30px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #fff;
+            color: white;
+            text-decoration: underline;
         }
-        
+
         .history .a1-content {
             display: flex;
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: white;
             /* padding: 20px; */
             margin-top: 10px;
             border-radius: 15px;
             margin-left: 20px;
             margin-right: 20px;
-            border: 1px solid #fff;
-            color: #fff;
+            color: rgb(41, 41, 41);
             text-align: center;
             justify-content: center;
             align-items: center;
         }
-        
+
         .history .text-info {
             margin: 5px;
             padding: 10px 20px;
-            color: #fff;
+            color: rgb(41, 41, 41);
             width: 25%;
         }
-        
-        .text-info span {
-            /* padding-left: 4px; */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
+
         .history .row-col1-text {
             margin-bottom: 8px;
         }
@@ -75,7 +83,8 @@
             <li><a onclick="toggleLogin()"><i class="fa-solid fa-user"></i></a></li>
             <div class="login1" id="login1">
                 <div class="login-info">
-                    <a href="history.html" style="color: white;" >Xin chào, NHOM12!</a>
+                    <a href="history.html" style="color: white;">Xin chào, NHOM12!</a>
+                    <a href="history.html" style="color: white;">Lịch sử đơn hàng</a>
                     <a href="index.html" style="color: white;">Đăng xuất</a>
                 </div>
             </div>
@@ -168,27 +177,33 @@
                     <a href="" class="footerheading"><i class="fa-solid fa-phone"></i> Hotline đặt hàng</a>
                     <ul class="hotline">
                         <li>
-                            <a href=""></a>19006008</li>
+                            <a href=""></a>19006008
+                        </li>
                     </ul>
                 </div>
                 <div class="column24">
                     <a href="" class="footerheading"><i class="fa-solid fa-location-dot"></i> Hệ thống cửa hàng</a>
                     <ul class="minicontent">
                         <li>
-                            <a href=""></a>Thành phố Hồ Chí Minh</li>
+                            <a href=""></a>Thành phố Hồ Chí Minh
+                        </li>
                         <li>
-                            <a href=""></a>Thủ đô Hà Nội</li>
+                            <a href=""></a>Thủ đô Hà Nội
+                        </li>
                         <li>
-                            <a href=""></a>Thành phố Đà Nẵng</li>
+                            <a href=""></a>Thành phố Đà Nẵng
+                        </li>
                     </ul>
                 </div>
                 <div class="column24">
                     <a href="" class="footerheading"><i class="fa-solid fa-users"></i> Về chúng tôi</a>
                     <ul class="minicontent">
                         <li>
-                            <a href=""></a>Tuyển dụng</li>
+                            <a href=""></a>Tuyển dụng
+                        </li>
                         <li>
-                            <a href=""></a>Đội ngũ nhân viên</li>
+                            <a href=""></a>Đội ngũ nhân viên
+                        </li>
                     </ul>
                 </div>
                 <div class="column24">
@@ -196,11 +211,14 @@
                         hàng</a>
                     <ul class="minicontent">
                         <li>
-                            <a href=""></a>Hướng dẫn đặt món</li>
+                            <a href=""></a>Hướng dẫn đặt món
+                        </li>
                         <li>
-                            <a href=""></a>Giải quyết vấn đề</li>
+                            <a href=""></a>Giải quyết vấn đề
+                        </li>
                         <li>
-                            <a href=""></a>Gmail</li>
+                            <a href=""></a>Gmail
+                        </li>
                     </ul>
                 </div>
             </div>

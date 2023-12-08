@@ -59,12 +59,28 @@
                     Drink
                 </button>
             </div>
+            <div class="search-price">
+                <div class="item">
+                    <label for="">Min Prices</label>
+                    <input type="number" name="minPrice">
+                </div>
+                <div class="item">
+                    <label for="">Max Prices</label>
+                    <input type="number" name="maxPrice">
+                </div>
+                <button id="price-filter"><i class="fa-solid fa-filter"></i></button>
+            </div>
         </div>
     </section>
 
     <section>
-        <div id="products"></div>
+        <div id="products" class="products"></div>
     </section>
+
+    <ul class="listPage">
+        
+    </ul>
+    <script src="pagination.js" defer></script>
 
     <section>
         <div class="products-preview">
@@ -117,7 +133,7 @@
             <div style="text-align: right;" class="price-total">
                 <p style="padding-top: 20px;">Tổng tiền: <span>0</span>đ</p>
             </div>
-            <button><a href="form.html" style="color: black;">Chốt Đơn</div></button>
+            <button><a href="form.html" style="color: white;">Chốt Đơn</div></button>
         </form>
     </section>
 

@@ -1,13 +1,13 @@
 let preveiwContainer = document.querySelector('.products-preview');
 let previewBox = preveiwContainer.querySelectorAll('.preview');
 
-document.querySelectorAll('.container .productname').forEach(productname =>{
-    productname.onclick = () =>{
+document.querySelectorAll('.imagecontainer').forEach(img =>{
+    (img).onclick = () =>{
     preveiwContainer.style.display = 'flex';
-    let name = productname.getAttribute('.productname');
+    let image = img.getAttribute('img');
     previewBox.forEach(preview =>{
-      let target = preview.getAttribute('.previewname');
-      if(name == target){
+      let target = preview.getAttribute('.preview-image');
+      if(image == target){
         preview.classList.add('active');
       }
     });
